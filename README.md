@@ -58,7 +58,7 @@ then you reference it in angular like this:
 
 # Gotchas
 
- * For some reason, angular goes into an infinite loop if you have an incorrect template URL. A simple "template not found" error would be nice, but what do I know?
- * In order for karma to be able to run the unit tests, all the app's dependencies must be loaded. If you add stuff in `vendor/` or add bower components, make sure the correct files get added to karma.config.js
+ * For some reason, angular goes into an infinite loop if you have an incorrect template URL in a route. A simple "template not found" error would be nice, but what do I know?
+ * In order for karma to be able to run the unit tests, all the app's dependencies must be loaded. If you add stuff in `vendor/` or add bower components, make sure the correct files get added to `karma.config.js`.
  * On that note, also keep in mind that `templates.js` is an auto-generated file. If you are changing templates and running karma, make sure brunch is running too otherwise your tests will be using a stale templates module.
  
