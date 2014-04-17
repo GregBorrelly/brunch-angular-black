@@ -1,4 +1,6 @@
-var app = angular.module("myapp", ["ngRoute", "templates"])
+(function () { 'use strict';
+
+var app = angular.module("myapp", ["ngRoute", "templates"]);
 
 app.config(function ($routeProvider)
 {
@@ -7,5 +9,7 @@ app.config(function ($routeProvider)
         {
             templateUrl: "app/welcome/templates/welcome.html",
             controller: "WelcomeCtrl"
-        })
-})
+        });
+});
+
+})();

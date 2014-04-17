@@ -32,5 +32,13 @@ exports.config =
     {
         wrapper: false,
         definition: false
+    },
+    
+    plugins:
+    {
+        jshint:
+        {
+            pattern: /^app\/.*\.js/
+        }
     }
 }
