@@ -1,5 +1,3 @@
-(function () { 'use strict';
-
 describe('WelcomeCtrl', function ()
 {
     var scope;
@@ -8,12 +6,10 @@ describe('WelcomeCtrl', function ()
     {
         scope = $rootScope.$new()
         $controller('WelcomeCtrl', { $scope: scope })
-    }));
+    }))
     
     it("Should have a `foo` that says 'there'", function ()
     {
         expect(scope.foo).toBe('there')
-    });
-});
-
-})()
+    })
+})

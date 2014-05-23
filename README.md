@@ -7,7 +7,6 @@ This is a skeleton for [Brunch](http://brunch.io). It has support for:
  * HTML template compilation
  * Karma with Jasmine
  * Stylus
- * JSHint
 
 It also suggests a project structure that groups files by feature rather than type. I.e., all your scripts, templates and styles that are specific to your hypothetical chat feature go together in a folder called "chat" rather than scripts going in a global scripts folder, styles in a global styles folder, etc.
 
@@ -17,23 +16,15 @@ Here is the default structure:
 app/
     assets/
         index.html
-    core/
-        scripts/
-            app.js
-        styles/
-            common.styl
     welcome/
-        scripts/
-            welcome.js
-        templates/
-            welcome.html
-test/
-    welcome.test.js
+        welcome.js
+        welcome.html
+        welcome.spec.js
+    app.js
+    common.styl
 ```
 
-There are two, let's use the word *groups*, "core" and "welcome". "core" contains the application configuration and common styles. You might put other things here too like user authentication, data model, etc. The "welcome" group has a template, a controller and the welcome-specific styles.
-
-This structure uses an awful lot of directories but can be helpful for larger projects.
+`app.js` an `common.styl` contain the application configuration and global styles. You might put other things here too like user authentication, data model, etc. or maybe you put those in separate modules. The "welcome" group has a template, a controller and the welcome-specific styles as well as tests.
 
 # What happens when I build?
 
@@ -42,8 +33,7 @@ Checkout `brunch-config.js` but the gist of it is that all the styles go into `c
 ```
 app/
     foo/
-        templates/
-            thing.html
+        thing.html
 ```
 
 then you reference it in angular like this:
@@ -51,7 +41,7 @@ then you reference it in angular like this:
 ```js
 {
     ...
-    templateUrl: "app/foo/templates/thing.html"
+    templateUrl: "app/foo/thing.html"
     ...
 }
 ```

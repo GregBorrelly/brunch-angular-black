@@ -1,5 +1,10 @@
 exports.config = 
 {
+    conventions:
+    {
+        ignored: /.+\.spec\.js/
+    },
+    
     files:
     {
         javascripts:
@@ -8,6 +13,10 @@ exports.config =
             {
                 "js/app.js": /^app/,
                 "js/vendor.js": /^(vendor|bower_components)/
+            },
+            order:
+            {
+                after: 'app/core/app.js'
             }
         },
         
@@ -32,13 +41,5 @@ exports.config =
     {
         wrapper: false,
         definition: false
-    },
-    
-    plugins:
-    {
-        jshint:
-        {
-            pattern: /^app\/.*\.js/
-        }
     }
 }
